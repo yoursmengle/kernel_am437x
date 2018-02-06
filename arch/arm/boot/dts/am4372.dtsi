@@ -8,10 +8,10 @@
  * kind, whether express or implied.
  */
 
+
+#include <skeleton.dtsi>
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/interrupt-controller/arm-gic.h>
-
-#include "skeleton.dtsi"
 
 / {
 	compatible = "ti,am4372", "ti,am43";

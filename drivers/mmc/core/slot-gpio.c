@@ -70,14 +70,11 @@ int mmc_gpio_get_ro(struct mmc_host *host)
 			!!(host->caps2 & MMC_CAP2_RO_ACTIVE_HIGH);
 
 	return gpiod_get_value_cansleep(ctx->ro_gpio);
-
 }
 EXPORT_SYMBOL(mmc_gpio_get_ro);
 
 int mmc_gpio_get_cd(struct mmc_host *host)
 {
-
-
 	struct mmc_gpio *ctx = host->slot.handler_priv;
 
 	if (!ctx || !ctx->cd_gpio)
@@ -88,7 +85,6 @@ int mmc_gpio_get_cd(struct mmc_host *host)
 			!!(host->caps2 & MMC_CAP2_CD_ACTIVE_HIGH);
 
 	return gpiod_get_value_cansleep(ctx->cd_gpio);
-
 }
 EXPORT_SYMBOL(mmc_gpio_get_cd);
 
