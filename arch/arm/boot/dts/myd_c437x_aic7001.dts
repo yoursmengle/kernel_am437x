@@ -572,24 +572,19 @@
 };
 
 &tscadc {
-        status = "okay";
-        tsc {
-                ti,wires = <4>;
-                ti,x-plate-resistance = <200>;
-		ti,coordinate-readouts = <5>;
-                ti,wire-config = <0x00 0x11 0x22 0x33>;
-		ti,charge-delay = <0x800>;
-        };
-
-        adc {
-                ti,adc-channels = <0 1 2 3 4 5 6 7>;
+      status = "okay";
+      adc {
+          ti,adc-channels = <0 1 2 3 4 5>;
         };
 };
 
+/*
 &adc1 {
 	status = "okay";
 	ti,adc-channels = <0 1 2 3 4 5 6 7>;
 };
+
+*/
 
 &cpu {
 	cpu0-supply = <&dcdc2>;
