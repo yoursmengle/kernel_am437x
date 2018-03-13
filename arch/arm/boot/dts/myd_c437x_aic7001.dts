@@ -237,7 +237,7 @@
 		>;
 	};
 
-	uart3_pins_default: uart3_pins_default {
+	uart1_pins_default: uart1_pins_default {
 		pinctrl-single,pins = <
 			0x228 ( PIN_INPUT_PULLUP | MUX_MODE0 ) /* (H25) uart3_rxd.uart3_rxd */
 			0x22c ( PIN_OUTPUT_PULLDOWN | MUX_MODE0 ) /* (H24) uart3_txd.uart3_txd */
@@ -247,7 +247,7 @@
 	};
 
 	/* Optional sleep pin settings. Must manually enter values in the below skeleton. */
-	uart3_pins_sleep: uart3_pins_sleep {
+	uart1_pins_sleep: uart1_pins_sleep {
 		pinctrl-single,pins = <
 			0x228 (PIN_INPUT_PULLUP | MUX_MODE7 ) /* (H25) uart3_rxd.uart3_rxd */
 			0x22c (PIN_INPUT_PULLUP | MUX_MODE7 ) /* (H24) uart3_txd.uart3_txd */
@@ -612,11 +612,11 @@
 	pinctrl-1 = <&uart0_pins_sleep>;
 };
 
-&uart3 {
+&uart1 {
 	status = "okay";
 	pinctrl-names = "default", "sleep";
-	pinctrl-0 = <&uart3_pins_default>;
-	pinctrl-1 = <&uart3_pins_sleep>;
+	pinctrl-0 = <&uart1_pins_default>;
+	pinctrl-1 = <&uart1_pins_sleep>;
 };
 
 &uart5 {
@@ -655,7 +655,6 @@
 };
 
 &epwmss0 {
-	status = "okay";
 	ehrpwm0: pwm@48300200 {
 		status = "okay";
 	};
